@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Book Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>My Book Recommender</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/recommend">Recommend</a>
+    </div>
+</nav>
+
+<div class="search-section">
+<form method="POST" action="/recommend_books">
+    <input type="text" name="user_input" placeholder="Search a book..." required>
+    <button type="submit">Search</button>
+</form>
+</div>
+
+<div class="genre-bar">
+    <a href="/recommend?genre=Fantasy">Fantasy</a>
+    <a href="/recommend?genre=Romance">Romance</a>
+    <a href="/recommend?genre=Horror">Horror</a>
+    <a href="/recommend?genre=Mystery">Mystery</a>
+    <a href="/recommend?genre=Science Fiction">Science Fiction</a>
+    <a href="/recommend?genre=Biography">Biography</a>
+</div>
+
+{% if data %}
+<h2 class="section-title">📚 Recommended Books</h2>
+<div class="book-grid">
+{% for book in data %}
+    <a href="/book/{{ book[0] }}" class="book-card">
+        <img src="{{ book[2] }}">
+        <h3>{{ book[0] }}</h3>
+        <p>{{ book[1] }}</p>
+    </a>
+{% endfor %}
+</div>
+{% endif %}
+
+</body>
+</html>

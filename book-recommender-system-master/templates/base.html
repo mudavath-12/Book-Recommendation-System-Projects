@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Recommendation System</title>
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6f9;
+}
+
+.navbar{
+background:linear-gradient(90deg,#6a11cb,#2575fc);
+padding:15px 40px;
+color:white;
+display:flex;
+justify-content:space-between;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+background:url("https://images.unsplash.com/photo-1512820790803-83ca734da794") center/cover;
+padding:100px;
+text-align:center;
+color:white;
+}
+
+.search-box input{
+padding:12px;
+width:40%;
+border-radius:30px;
+border:none;
+}
+
+.search-box button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#2575fc;
+color:white;
+cursor:pointer;
+}
+
+.search-box button:hover{
+background:#6a11cb;
+}
+
+.books{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:40px;
+}
+
+.card{
+background:white;
+width:250px;
+margin:15px;
+padding:15px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.details-btn{
+background:#6a11cb;
+color:white;
+padding:8px 15px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+.details-btn:hover{
+background:#2575fc;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<div><b>📚 My Book Recommender</b></div>
+<div><a href="/">Home</a></div>
+</div>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

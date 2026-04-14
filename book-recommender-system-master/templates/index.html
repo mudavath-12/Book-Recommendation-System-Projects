@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero">
+<h1>Find Your Book of Choice</h1>
+
+<form action="/search" method="get" class="search-box">
+<input type="text" name="q" placeholder="Search books..." required>
+<button type="submit">Search</button>
+</form>
+</div>
+
+<h2 style="text-align:center;margin-top:30px;">Recommended Books</h2>
+
+<div class="books">
+{% for b in books %}
+<div class="card">
+<img src="{{b.image}}">
+<h3>{{b.title}}</h3>
+<p><b>Author:</b> {{b.author}}</p>
+<p><b>Category:</b> {{b.categories}}</p>
+<p><b>Rating:</b> ⭐ {{b.rating}}</p>
+<p>
+<b>Price:</b>
+{% if b.price != "Not for Sale" %}
+{{b.currency}} {{b.price}}
+{% else %}
+Not for Sale
+{% endif %}
+</p>
+
+<a href="/book/{{b.id}}">
+<button class="details-btn">View Details</button>
+</a>
+
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

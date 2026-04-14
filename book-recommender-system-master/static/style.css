@@ -1,0 +1,103 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#111;
+    color:white;
+}
+
+nav{
+    background:linear-gradient(90deg,#6a11cb,#2575fc);
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    height:60vh;
+    background:url("https://images.unsplash.com/photo-1512820790803-83ca734da794") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.overlay input{
+    padding:12px;
+    width:300px;
+    border-radius:20px;
+    border:none;
+}
+
+.overlay button{
+    padding:12px 20px;
+    border:none;
+    border-radius:20px;
+    background:#2575fc;
+    color:white;
+    cursor:pointer;
+}
+
+.section-title{
+    text-align:center;
+    margin:40px 0 20px 0;
+}
+
+.books{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding-bottom:40px;
+}
+
+.card{
+    background:#222;
+    width:200px;
+    padding:15px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    border-radius:8px;
+}
+
+.book-details{
+    display:flex;
+    padding:40px;
+    gap:40px;
+}
+
+.book-details img{
+    width:300px;
+    border-radius:10px;
+}
+
+.wishlist-btn{
+    padding:10px 20px;
+    background:#ff4081;
+    border:none;
+    border-radius:20px;
+    color:white;
+    cursor:pointer;
+}

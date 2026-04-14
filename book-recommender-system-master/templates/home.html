@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Book Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>My Book Recommender</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/recommend">Recommend</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Find Your Book of Choice</h1>
+    <p>Discover books that match your taste</p>
+    <a href="/recommend" class="btn">Start Exploring</a>
+</div>
+
+</body>
+</html>
